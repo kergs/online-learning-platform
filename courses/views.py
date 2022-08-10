@@ -163,7 +163,6 @@ class CourseListView(TemplateResponseMixin, View):
                                         'subject': subject,
                                         'courses': courses})
                                 
-
-class CourseDetailedView(DetailView):
+class CourseDetailView(DetailView):
     model = Course
     template_name = 'courses/course/detail.html'
