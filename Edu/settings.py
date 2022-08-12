@@ -14,6 +14,8 @@ from pathlib import Path
 from dotenv import load_dotenv,find_dotenv
 load_dotenv(find_dotenv())
 import os
+from django.urls import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('studennt_course_list')
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'courses.apps.CoursesConfig',
+    'students.apps.StudentsConfig',
 ]
 
 MIDDLEWARE = [
